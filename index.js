@@ -75,9 +75,15 @@ function ortalamaBul(numbers) {
 */
 
 function ortalamadanBuyukleriBul(numbers, findAverage) {
-  const average = 0
+  const average = numbers.length === 0 ? null : numbers.filter(x => x >= findAverage(numbers));
+  return average;
   
 }
+console.log(ortalamadanBuyukleriBul([], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([4], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([50, -26, 153, 7], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul));
+
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
